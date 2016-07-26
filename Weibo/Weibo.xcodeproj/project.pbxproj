@@ -374,6 +374,7 @@
 				INFOPLIST_FILE = Weibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "https---github.com-evenCoder.Weibo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -387,6 +388,7 @@
 				INFOPLIST_FILE = Weibo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "https---github.com-evenCoder.Weibo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -459,6 +461,7 @@
 				B9C9A3211D4718540046E1BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B9C9A3221D4718540046E1BC /* Build configuration list for PBXNativeTarget "WeiboTests" */ = {
 			isa = XCConfigurationList;
@@ -467,6 +470,7 @@
 				B9C9A3241D4718540046E1BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B9C9A3251D4718540046E1BC /* Build configuration list for PBXNativeTarget "WeiboUITests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +479,7 @@
 				B9C9A3271D4718540046E1BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
