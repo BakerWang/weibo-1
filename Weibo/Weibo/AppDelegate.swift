@@ -30,10 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // 1.创建window
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        window?.backgroundColor = UIColor.orangeColor()
+        // window?.backgroundColor = UIColor.orangeColor()
         
         // 2.创建跟控制器
-        window?.rootViewController = ViewController()
+        window?.rootViewController = MainViewController()
         
         // 3.显示控制器
         window?.makeKeyAndVisible()
