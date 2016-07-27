@@ -10,17 +10,39 @@ import UIKit
 
 class MainViewController: UITabBarController {
 
+    // MARK: 声明周期方法
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        // 首页
-//        addChildViewController(HomeTableViewController(), title: "首页", imageName: "tabbar_home")
-//        // 消息
-//        addChildViewController(MessageTableViewController(), title: "消息", imageName: "tabbar_message_center")
-//        // 发现
-//        addChildViewController(DiscoverTableViewController(), title: "发现", imageName: "tabbar_discover")
-//        // 我
-//        addChildViewController(ProfileTableViewController(), title: "我", imageName: "tabbar_profile")
+        
+        addChildViewControllers()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        // 初始化加号按钮
+        setupComposeButton()
+    }
+    
+    // MARK: 内部控制器方法
+    // 如果在方法前面加上private, 代表这个方法只能在当前文件中访问
+    // 如果在属性前面加上private, 代表这个属性只能在当前文件中访问
+    // 如果在类 前面加上private, 代表这个类只能在当前文件中访问
+    private func setupComposeButton() {
+        
+        // 将加号按钮添加到tabbar上
+        tabBar.addSubview(composeButton)
+        // 计算宽度
+        let width = UIScreen.mainScreen().bounds.width / CGFloat(childViewControllers.count)
+        // 计算高度
+        let height = tabBar.bounds.height
+        // 修改frame
+        let rect = CGRect(origin: CGPointZero, size: CGSize(width: width, height: height))
+        composeButton.frame = CGRectOffset(rect, 2 * width, 0)
+    }
+    
+    // 添加所有子控制器
+    private func addChildViewControllers() {
         
         // 获取路径
         let path = NSBundle.mainBundle().pathForResource("MainVCSettings.json", ofType: nil)!
@@ -47,13 +69,20 @@ class MainViewController: UITabBarController {
             // 服务器没有数据
             addChildViewControllerWithJsonString("HomeTableViewController", title: "首页", imageName: "tabbar_home")
             addChildViewControllerWithJsonString("MessageTableViewController", title: "消息", imageName: "tabbar_message_center")
+            addChildViewController(NullViewController())
             addChildViewControllerWithJsonString("DiscoverTableViewController", title: "发现", imageName: "tabbar_discover")
             addChildViewControllerWithJsonString("ProfileTableViewController", title: "我", imageName: "tabbar_profile")
         }
     }
     
-    // 通过后台返回的字符串动态创建子控制器
-    func addChildViewControllerWithJsonString(childControllerName: String?, title: String?, imageName: String?) {
+    /**
+     通过后台返回的字符串动态创建子控制器
+
+    - parameter childControllerName: 子控制器名称
+    - parameter title:               子控制器标题
+    - parameter imageName:           子控制器图片
+    */
+    private func addChildViewControllerWithJsonString(childControllerName: String?, title: String?, imageName: String?) {
         
         /**
          guard使用:
@@ -116,7 +145,7 @@ class MainViewController: UITabBarController {
     }
     
     // 常规创建
-    func addChildViewController(childController: UIViewController, title: String, imageName: String) {
+    private func addChildViewController(childController: UIViewController, title: String, imageName: String) {
         
         // 1. 创建子控制器
         // 在iOS8之前只有文字有效果 图片没有效果
@@ -139,5 +168,25 @@ class MainViewController: UITabBarController {
         // 1.4 添加
         addChildViewController(naVC)
     }
-
+    
+    // MARK: 监听点击事件
+    // 注意: 由于点击事件是由NSRunLoop发起的,并不是当前的类发起的, 所以如果在点击方法前面加上private
+    //      那么NSRunLoop无法找到该方法
+    // OC是基于运行时动态派发事件的, Swift是编译时就已经确定了方法
+    // 如果想给监听点击的方法加上private, 并且又想让系统动态派发时找到这个方法，那么可以
+    // 在private前面加上@objc, @objc之前这个方法动态派发
+    @objc private func composeBtnClick() {
+        
+        NSLog("composeBtnClick")
+    }
+    
+    // MARK: 懒加载
+    private lazy var composeButton: UIButton = {
+        
+        // 1. 设置背景图片
+        let btn = UIButton(imageName: "tabbar_compose_button", backImageName: "tabbar_compose_icon_add")
+        // 监听Button点击
+        btn.addTarget(self, action: Selector("composeBtnClick"), forControlEvents: UIControlEvents.TouchUpInside)
+        return btn
+    }()
 }

@@ -18,6 +18,7 @@
 		B9C9A3381D488D010046E1BC /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C9A3371D488D010046E1BC /* ProfileTableViewController.swift */; };
 		B9C9A33C1D48B24B0046E1BC /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = B9C9A33A1D48B24B0046E1BC /* MainVCSettings.json */; };
 		B9C9A33D1D48B24B0046E1BC /* NullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C9A33B1D48B24B0046E1BC /* NullViewController.swift */; };
+		B9C9A33F1D4923540046E1BC /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C9A33E1D4923540046E1BC /* UIButton+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		B9C9A3371D488D010046E1BC /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		B9C9A33A1D48B24B0046E1BC /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
 		B9C9A33B1D48B24B0046E1BC /* NullViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullViewController.swift; sourceTree = "<group>"; };
+		B9C9A33E1D4923540046E1BC /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 		B9C9A32E1D48891F0046E1BC /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				B9C9A33E1D4923540046E1BC /* UIButton+Extension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				B9C9A3301D488C180046E1BC /* MainViewController.swift in Sources */,
 				B9C9A3361D488CF10046E1BC /* MessageTableViewController.swift in Sources */,
 				B9C9A3321D488CC90046E1BC /* DiscoverTableViewController.swift in Sources */,
+				B9C9A33F1D4923540046E1BC /* UIButton+Extension.swift in Sources */,
 				B9C9A2FB1D4718540046E1BC /* AppDelegate.swift in Sources */,
 				B9C9A33D1D48B24B0046E1BC /* NullViewController.swift in Sources */,
 			);
