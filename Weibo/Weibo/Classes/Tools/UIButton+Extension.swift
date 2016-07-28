@@ -42,5 +42,25 @@ extension UIButton {
         
         sizeToFit()
     }
+    
+    convenience init(title: String, titleColor: UIColor, backImageName: String) {
+        
+        self.init()
+        setTitle(title, forState: UIControlState.Normal)
+        setTitleColor(titleColor, forState: UIControlState.Normal)
+        setBackgroundImage(UIImage(named: backImageName), forState: UIControlState.Normal)
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 

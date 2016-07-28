@@ -10,7 +10,7 @@ import UIKit
 
 class MainViewController: UITabBarController {
 
-    // MARK: 声明周期方法
+    // MARK: - 声明周期方法
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,7 +24,32 @@ class MainViewController: UITabBarController {
         setupComposeButton()
     }
     
-    // MARK: 内部控制器方法
+    // MARK: - 监听点击事件(*)
+    // 注意: 由于点击事件是由NSRunLoop发起的,并不是当前的类发起的, 所以如果在点击方法前面加上private 那么NSRunLoop无法找到该方法
+    //
+    // OC是基于运行时动态派发事件的, Swift是编译时就已经确定了方法
+    // 如果想给监听点击的方法加上private, 并且又想让系统动态派发时找到这个方法，那么可以
+    // 在private前面加上@objc, @objc在这个方法编译之前动态派发
+    @objc private func composeBtnClick() {
+        
+        NSLog("composeBtnClick")
+    }
+    
+    // MARK: - 懒加载
+    private lazy var composeButton: UIButton = {
+        
+        // 1. 设置背景图片
+        let btn = UIButton(imageName: "tabbar_compose_button", backImageName: "tabbar_compose_icon_add")
+        // 监听Button点击
+        btn.addTarget(self, action: Selector("composeBtnClick"), forControlEvents: UIControlEvents.TouchUpInside)
+        return btn
+    }()
+}
+
+// MARK: - 内部控制器方法
+// 初始化控制器
+extension MainViewController {
+    
     // 如果在方法前面加上private, 代表这个方法只能在当前文件中访问
     // 如果在属性前面加上private, 代表这个属性只能在当前文件中访问
     // 如果在类 前面加上private, 代表这个类只能在当前文件中访问
@@ -77,11 +102,11 @@ class MainViewController: UITabBarController {
     
     /**
      通过后台返回的字符串动态创建子控制器
-
-    - parameter childControllerName: 子控制器名称
-    - parameter title:               子控制器标题
-    - parameter imageName:           子控制器图片
-    */
+     
+     - parameter childControllerName: 子控制器名称
+     - parameter title:               子控制器标题
+     - parameter imageName:           子控制器图片
+     */
     private func addChildViewControllerWithJsonString(childControllerName: String?, title: String?, imageName: String?) {
         
         /**
@@ -89,14 +114,14 @@ class MainViewController: UITabBarController {
          格式:
          guard 条件表达式 else {
          
-            需要执行的语句
-            return
+         需要执行的语句
+         return
          }
          特点: 只要条件为假才会执行else中的代码
          作用: 用于过滤数据
-        */
+         */
          
-        // 动态获取命名空间
+         // 动态获取命名空间
         let nameSpace = NSBundle.mainBundle().infoDictionary!["CFBundleExecutable"]
         guard let name = nameSpace as? String else {
             
@@ -129,7 +154,7 @@ class MainViewController: UITabBarController {
         
         // 1.2 创建子控制器属性
         if let iName = imageName {
-        
+            
             childVC.tabBarItem.image = UIImage(named: iName)
             childVC.tabBarItem.selectedImage = UIImage(named: iName + "_highlighted")
         }
@@ -141,7 +166,7 @@ class MainViewController: UITabBarController {
         
         // 1.4 添加
         addChildViewController(naVC)
-
+        
     }
     
     // 常规创建
@@ -168,25 +193,4 @@ class MainViewController: UITabBarController {
         // 1.4 添加
         addChildViewController(naVC)
     }
-    
-    // MARK: 监听点击事件
-    // 注意: 由于点击事件是由NSRunLoop发起的,并不是当前的类发起的, 所以如果在点击方法前面加上private
-    //      那么NSRunLoop无法找到该方法
-    // OC是基于运行时动态派发事件的, Swift是编译时就已经确定了方法
-    // 如果想给监听点击的方法加上private, 并且又想让系统动态派发时找到这个方法，那么可以
-    // 在private前面加上@objc, @objc之前这个方法动态派发
-    @objc private func composeBtnClick() {
-        
-        NSLog("composeBtnClick")
-    }
-    
-    // MARK: 懒加载
-    private lazy var composeButton: UIButton = {
-        
-        // 1. 设置背景图片
-        let btn = UIButton(imageName: "tabbar_compose_button", backImageName: "tabbar_compose_icon_add")
-        // 监听Button点击
-        btn.addTarget(self, action: Selector("composeBtnClick"), forControlEvents: UIControlEvents.TouchUpInside)
-        return btn
-    }()
 }

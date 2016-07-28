@@ -28,6 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
+        // 全局设置外观(全局:appearance())
+        setupAppearance()
         // 1.创建window
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         // window?.backgroundColor = UIColor.orangeColor()
@@ -39,6 +41,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         return true
+    }
+    
+    /**
+     全局外观设置
+     */
+    private func setupAppearance() {
+        
+        UINavigationBar.appearance().tintColor = UIColor.orangeColor()
+        UITabBar.appearance().tintColor = UIColor.orangeColor()
     }
 
     func applicationWillResignActive(application: UIApplication) {
