@@ -50,6 +50,14 @@ extension UIButton {
         setTitleColor(titleColor, forState: UIControlState.Normal)
         setBackgroundImage(UIImage(named: backImageName), forState: UIControlState.Normal)
     }
+    
+    convenience init(imageName: String) {
+        
+        self.init()
+        setImage(UIImage(named: imageName), forState: UIControlState.Normal)
+        setImage(UIImage(named: imageName + "_highlighted"), forState: UIControlState.Highlighted)
+        sizeToFit()
+    }
 }
 
 

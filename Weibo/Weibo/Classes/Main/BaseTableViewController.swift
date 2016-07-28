@@ -11,7 +11,7 @@ import UIKit
 class BaseTableViewController: UITableViewController {
 
     // 定义标记，记录用户当前是否登录
-    var login: Bool = false
+    var login: Bool = true
     // 访客视图
     var vistorView: VistorView?
     override func loadView() {

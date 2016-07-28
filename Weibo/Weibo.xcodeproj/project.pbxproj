@@ -10,6 +10,7 @@
 		220BA7ED6E0FCF72880A79D1 /* Pods_Weibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7638D608751331BFBFBE1FE5 /* Pods_Weibo.framework */; };
 		B944F7671D4A66AB00414C8D /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944F7661D4A66AB00414C8D /* UIImageView+Extension.swift */; };
 		B944F7691D4A6AA800414C8D /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944F7681D4A6AA800414C8D /* UILabel+Extension.swift */; };
+		B944F76B1D4A990C00414C8D /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944F76A1D4A990C00414C8D /* UIBarButtonItem+Extension.swift */; };
 		B9C9A2FB1D4718540046E1BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C9A2FA1D4718540046E1BC /* AppDelegate.swift */; };
 		B9C9A3021D4718540046E1BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9C9A3011D4718540046E1BC /* Assets.xcassets */; };
 		B9C9A3101D4718540046E1BC /* WeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C9A30F1D4718540046E1BC /* WeiboTests.swift */; };
@@ -47,6 +48,7 @@
 		7638D608751331BFBFBE1FE5 /* Pods_Weibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B944F7661D4A66AB00414C8D /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		B944F7681D4A6AA800414C8D /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		B944F76A1D4A990C00414C8D /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		B9C9A2F71D4718540046E1BC /* Weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C9A2FA1D4718540046E1BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9C9A3011D4718540046E1BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				B9C9A33E1D4923540046E1BC /* UIButton+Extension.swift */,
 				B944F7661D4A66AB00414C8D /* UIImageView+Extension.swift */,
 				B944F7681D4A6AA800414C8D /* UILabel+Extension.swift */,
+				B944F76A1D4A990C00414C8D /* UIBarButtonItem+Extension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				B9C9A3431D493F9C0046E1BC /* VistorView.swift in Sources */,
 				B9C9A2FB1D4718540046E1BC /* AppDelegate.swift in Sources */,
 				B9C9A33D1D48B24B0046E1BC /* NullViewController.swift in Sources */,
+				B944F76B1D4A990C00414C8D /* UIBarButtonItem+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
