@@ -12,6 +12,10 @@
 		B944F7691D4A6AA800414C8D /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944F7681D4A6AA800414C8D /* UILabel+Extension.swift */; };
 		B944F76B1D4A990C00414C8D /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944F76A1D4A990C00414C8D /* UIBarButtonItem+Extension.swift */; };
 		B944F76D1D4B2FAD00414C8D /* JWTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944F76C1D4B2FAD00414C8D /* JWTitleButton.swift */; };
+		B944F7701D4B851B00414C8D /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944F76F1D4B851B00414C8D /* PopoverViewController.swift */; };
+		B944F7721D4B879100414C8D /* PopoverViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B944F7711D4B879100414C8D /* PopoverViewController.storyboard */; };
+		B944F7741D4B9B2200414C8D /* JWPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944F7731D4B9B2200414C8D /* JWPresentationController.swift */; };
+		B944F7781D4BE10C00414C8D /* PopoverAnimationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944F7771D4BE10C00414C8D /* PopoverAnimationManager.swift */; };
 		B9C9A2FB1D4718540046E1BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C9A2FA1D4718540046E1BC /* AppDelegate.swift */; };
 		B9C9A3021D4718540046E1BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9C9A3011D4718540046E1BC /* Assets.xcassets */; };
 		B9C9A3101D4718540046E1BC /* WeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C9A30F1D4718540046E1BC /* WeiboTests.swift */; };
@@ -51,6 +55,10 @@
 		B944F7681D4A6AA800414C8D /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		B944F76A1D4A990C00414C8D /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		B944F76C1D4B2FAD00414C8D /* JWTitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWTitleButton.swift; sourceTree = "<group>"; };
+		B944F76F1D4B851B00414C8D /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		B944F7711D4B879100414C8D /* PopoverViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PopoverViewController.storyboard; sourceTree = "<group>"; };
+		B944F7731D4B9B2200414C8D /* JWPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWPresentationController.swift; sourceTree = "<group>"; };
+		B944F7771D4BE10C00414C8D /* PopoverAnimationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverAnimationManager.swift; sourceTree = "<group>"; };
 		B9C9A2F71D4718540046E1BC /* Weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C9A2FA1D4718540046E1BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9C9A3011D4718540046E1BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,6 +124,17 @@
 				BF8A2506F96C895D2DF11941 /* Pods-Weibo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B944F76E1D4B83E300414C8D /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				B944F76F1D4B851B00414C8D /* PopoverViewController.swift */,
+				B944F7711D4B879100414C8D /* PopoverViewController.storyboard */,
+				B944F7731D4B9B2200414C8D /* JWPresentationController.swift */,
+				B944F7771D4BE10C00414C8D /* PopoverAnimationManager.swift */,
+			);
+			path = Popover;
 			sourceTree = "<group>";
 		};
 		B9C9A2EE1D4718530046E1BC = {
@@ -193,6 +212,7 @@
 		B9C9A32A1D48891F0046E1BC /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B944F76E1D4B83E300414C8D /* Popover */,
 				B9C9A3331D488CE20046E1BC /* HomeTableViewController.swift */,
 			);
 			path = Home;
@@ -353,6 +373,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B944F7721D4B879100414C8D /* PopoverViewController.storyboard in Resources */,
 				B9C9A33C1D48B24B0046E1BC /* MainVCSettings.json in Resources */,
 				B9C9A3021D4718540046E1BC /* Assets.xcassets in Resources */,
 			);
@@ -429,13 +450,16 @@
 			files = (
 				B9C9A3411D493BBE0046E1BC /* BaseTableViewController.swift in Sources */,
 				B944F76D1D4B2FAD00414C8D /* JWTitleButton.swift in Sources */,
+				B944F7781D4BE10C00414C8D /* PopoverAnimationManager.swift in Sources */,
 				B9C9A3381D488D010046E1BC /* ProfileTableViewController.swift in Sources */,
 				B9C9A3341D488CE20046E1BC /* HomeTableViewController.swift in Sources */,
 				B9C9A3301D488C180046E1BC /* MainViewController.swift in Sources */,
 				B9C9A3361D488CF10046E1BC /* MessageTableViewController.swift in Sources */,
 				B9C9A3321D488CC90046E1BC /* DiscoverTableViewController.swift in Sources */,
+				B944F7701D4B851B00414C8D /* PopoverViewController.swift in Sources */,
 				B9C9A33F1D4923540046E1BC /* UIButton+Extension.swift in Sources */,
 				B944F7671D4A66AB00414C8D /* UIImageView+Extension.swift in Sources */,
+				B944F7741D4B9B2200414C8D /* JWPresentationController.swift in Sources */,
 				B944F7691D4A6AA800414C8D /* UILabel+Extension.swift in Sources */,
 				B9C9A3431D493F9C0046E1BC /* VistorView.swift in Sources */,
 				B9C9A2FB1D4718540046E1BC /* AppDelegate.swift in Sources */,
