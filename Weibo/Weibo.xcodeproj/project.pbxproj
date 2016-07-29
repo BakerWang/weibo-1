@@ -11,6 +11,7 @@
 		B944F7671D4A66AB00414C8D /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944F7661D4A66AB00414C8D /* UIImageView+Extension.swift */; };
 		B944F7691D4A6AA800414C8D /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944F7681D4A6AA800414C8D /* UILabel+Extension.swift */; };
 		B944F76B1D4A990C00414C8D /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944F76A1D4A990C00414C8D /* UIBarButtonItem+Extension.swift */; };
+		B944F76D1D4B2FAD00414C8D /* JWTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B944F76C1D4B2FAD00414C8D /* JWTitleButton.swift */; };
 		B9C9A2FB1D4718540046E1BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C9A2FA1D4718540046E1BC /* AppDelegate.swift */; };
 		B9C9A3021D4718540046E1BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9C9A3011D4718540046E1BC /* Assets.xcassets */; };
 		B9C9A3101D4718540046E1BC /* WeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C9A30F1D4718540046E1BC /* WeiboTests.swift */; };
@@ -49,6 +50,7 @@
 		B944F7661D4A66AB00414C8D /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		B944F7681D4A6AA800414C8D /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		B944F76A1D4A990C00414C8D /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		B944F76C1D4B2FAD00414C8D /* JWTitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWTitleButton.swift; sourceTree = "<group>"; };
 		B9C9A2F71D4718540046E1BC /* Weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C9A2FA1D4718540046E1BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9C9A3011D4718540046E1BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				B944F7661D4A66AB00414C8D /* UIImageView+Extension.swift */,
 				B944F7681D4A6AA800414C8D /* UILabel+Extension.swift */,
 				B944F76A1D4A990C00414C8D /* UIBarButtonItem+Extension.swift */,
+				B944F76C1D4B2FAD00414C8D /* JWTitleButton.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9C9A3411D493BBE0046E1BC /* BaseTableViewController.swift in Sources */,
+				B944F76D1D4B2FAD00414C8D /* JWTitleButton.swift in Sources */,
 				B9C9A3381D488D010046E1BC /* ProfileTableViewController.swift in Sources */,
 				B9C9A3341D488CE20046E1BC /* HomeTableViewController.swift in Sources */,
 				B9C9A3301D488C180046E1BC /* MainViewController.swift in Sources */,

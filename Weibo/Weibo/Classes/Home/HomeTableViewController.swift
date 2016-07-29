@@ -27,9 +27,22 @@ class HomeTableViewController: BaseTableViewController {
      */
     private func setupNavigation() {
         
+        // 添加到导航栏左右按钮
         navigationItem.leftBarButtonItem = UIBarButtonItem(imageName: "navigationbar_friendattention", target: self, action: Selector("leftBarButtonItemDidClick"))
 
         navigationItem.rightBarButtonItem = UIBarButtonItem(imageName: "navigationbar_pop", target: self, action: Selector("rightBarButtonItemDidClick"))
+        
+        // 添加标题按钮
+        let btn = JWTitleButton()
+        btn.setTitle("EvenCoder", forState: UIControlState.Normal)
+        btn.addTarget(self, action: Selector("titleButtonDidClick:"), forControlEvents: UIControlEvents.TouchUpInside)
+        navigationItem.titleView = btn
+    }
+    
+    @objc private func titleButtonDidClick(titleButton: JWTitleButton) {
+    
+        titleButton.selected = !titleButton.selected
+        NSLog("")
     }
     
     @objc private func leftBarButtonItemDidClick() {
@@ -41,4 +54,8 @@ class HomeTableViewController: BaseTableViewController {
         
         NSLog("")
     }
+    
+    /**
+    *  
+    */
 }
