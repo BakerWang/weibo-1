@@ -75,7 +75,12 @@ class HomeTableViewController: BaseTableViewController {
     
     @objc private func rightBarButtonItemDidClick() {
         
-        NSLog("")
+        // 创建二维码控制器
+        let sb = UIStoryboard(name: "QRCodeViewController", bundle: nil)
+        let QRCodeVC = sb.instantiateInitialViewController()!
+        
+        // 展现二维码控制器
+        presentViewController(QRCodeVC, animated: false, completion: nil)
     }
     
     // MARK: - 懒加载
