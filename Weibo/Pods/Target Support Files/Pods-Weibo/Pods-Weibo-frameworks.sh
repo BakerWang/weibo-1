@@ -84,8 +84,16 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-Weibo/AFNetworking.framework"
+  install_framework "Pods-Weibo/Alamofire.framework"
+  install_framework "Pods-Weibo/SDWebImage.framework"
+  install_framework "Pods-Weibo/SVProgressHUD.framework"
   install_framework "Pods-Weibo/SnapKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-Weibo/AFNetworking.framework"
+  install_framework "Pods-Weibo/Alamofire.framework"
+  install_framework "Pods-Weibo/SDWebImage.framework"
+  install_framework "Pods-Weibo/SVProgressHUD.framework"
   install_framework "Pods-Weibo/SnapKit.framework"
 fi

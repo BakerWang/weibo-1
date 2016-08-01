@@ -11,7 +11,7 @@ import UIKit
 class BaseTableViewController: UITableViewController {
 
     // 定义标记，记录用户当前是否登录
-    var login: Bool = true
+    var login: Bool = false
     // 访客视图
     var vistorView: VistorView?
     override func loadView() {
@@ -42,6 +42,8 @@ class BaseTableViewController: UITableViewController {
     
     @objc private func loginDidClick() {
         
-        NSLog("loginDidClick")
+        let oauthVC = OAuthViewController()
+        let nav = UINavigationController(rootViewController: oauthVC)
+        presentViewController(nav, animated: true, completion: nil)
     }
 }
