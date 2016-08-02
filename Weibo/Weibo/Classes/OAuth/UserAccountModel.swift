@@ -38,11 +38,10 @@ class UserAccountModel: NSObject, NSCoding {
     func saveUserAccount() -> Bool {
         
         // 获取Document路径
-        let docPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).last!
-        let filePath = (docPath as NSString).stringByAppendingPathComponent("useraccount.plist") // 拼接路劲
+        let docPath = "useraccount.plist".doc()
         
-        NSLog("filePath = \(filePath)")
-        return NSKeyedArchiver.archiveRootObject(self, toFile: filePath)
+        NSLog("filePath = \(docPath)")
+        return NSKeyedArchiver.archiveRootObject(self, toFile: docPath)
     }
     
     // MARK: - NSCoding归档

@@ -22,6 +22,7 @@
 		B9499D4D1D4F2DF4003AB0B1 /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9499D4C1D4F2DF4003AB0B1 /* OAuthViewController.swift */; };
 		B9499D4F1D4F89B5003AB0B1 /* HTTPNetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9499D4E1D4F89B5003AB0B1 /* HTTPNetworkTools.swift */; };
 		B9499D511D4F97DE003AB0B1 /* UserAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9499D501D4F97DE003AB0B1 /* UserAccountModel.swift */; };
+		B9A413D81D51255900847771 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A413D71D51255900847771 /* String+Extension.swift */; };
 		B9C9A2FB1D4718540046E1BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C9A2FA1D4718540046E1BC /* AppDelegate.swift */; };
 		B9C9A3021D4718540046E1BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9C9A3011D4718540046E1BC /* Assets.xcassets */; };
 		B9C9A3101D4718540046E1BC /* WeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C9A30F1D4718540046E1BC /* WeiboTests.swift */; };
@@ -71,6 +72,7 @@
 		B9499D4C1D4F2DF4003AB0B1 /* OAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
 		B9499D4E1D4F89B5003AB0B1 /* HTTPNetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPNetworkTools.swift; sourceTree = "<group>"; };
 		B9499D501D4F97DE003AB0B1 /* UserAccountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountModel.swift; sourceTree = "<group>"; };
+		B9A413D71D51255900847771 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		B9C9A2F71D4718540046E1BC /* Weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C9A2FA1D4718540046E1BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9C9A3011D4718540046E1BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				B944F76A1D4A990C00414C8D /* UIBarButtonItem+Extension.swift */,
 				B944F76C1D4B2FAD00414C8D /* JWTitleButton.swift */,
 				B9499D4E1D4F89B5003AB0B1 /* HTTPNetworkTools.swift */,
+				B9A413D71D51255900847771 /* String+Extension.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 				B944F77B1D4C810F00414C8D /* QRCodeViewController.swift in Sources */,
 				B9C9A3361D488CF10046E1BC /* MessageTableViewController.swift in Sources */,
 				B9C9A3321D488CC90046E1BC /* DiscoverTableViewController.swift in Sources */,
+				B9A413D81D51255900847771 /* String+Extension.swift in Sources */,
 				B944F7701D4B851B00414C8D /* PopoverViewController.swift in Sources */,
 				B9C9A33F1D4923540046E1BC /* UIButton+Extension.swift in Sources */,
 				B944F7671D4A66AB00414C8D /* UIImageView+Extension.swift in Sources */,

@@ -91,11 +91,6 @@ extension OAuthViewController: UIWebViewDelegate {
         webView.stringByEvaluatingJavaScriptFromString(js)
     }
     
-//    func webView(webView: UIWebView, didFailLoadWithError error: NSError?) {
-//        
-//        SVProgressHUD.showErrorWithStatus("加载失败", maskType: SVProgressHUDMaskType.Black)
-//    }
-    
     // 代理方法用于控制是否允许发起请求
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         
